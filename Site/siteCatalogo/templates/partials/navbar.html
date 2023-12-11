@@ -1,0 +1,25 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light text-bg" style="background-color: black;">
+  <div class="container justify-content-between">
+    <div class="d-flex">
+      <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+        <img src="{% static 'img/logo.png' %}" alt="MDB Logo" loading="lazy" style="margin-top: 2px; height: 60px; width: 70px;"/>
+      </a>
+      <li><a href="{% url 'index' %}" class="nav-link px-2 text-white">Início</a></li>
+      <li><a href="{% url 'biblioteca' %}" class="nav-link px-2 text-white">CATALOGO</a></li>           
+    </div>
+    <ul class="navbar-nav flex-row d-none d-md-flex">
+      <form class="input-group w-auto my-auto d-none d-sm-flex">
+        <input autocomplete="off" type="search" class="form-control rounded" placeholder="Pesquisar" style="min-width: 125px;"/>
+        <span class="input-group-text border-0 d-none d-lg-flex">
+          <button type="submit" class="btn btn-outline-light"><i class="fas fa-search"></i></button>
+        </span>
+      </form>
+    </ul>
+    <ul class="navbar-nav flex-row">
+      <li class="nav-item me-3 me-lg-1">
+        <!-- <a href="{% url 'logout' %}"><img src="{% static 'img/sair.png' %}" alt="" style="width: 40px; height: 40px;padding: 0.5%;"></a> -->
+      </li>
+    </ul>
+  </div>
+</nav>
